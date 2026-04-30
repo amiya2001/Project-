@@ -1,0 +1,19 @@
+paks/                          ← root
+├── backend/
+│   ├── main.py                ← FastAPI app entry point
+│   ├── routers/
+│   │   ├── ingest.py          ← /api/ingest endpoints
+│   │   ├── query.py           ← /api/query endpoints
+│   │   ├── chat.py            ← /api/chat endpoints
+│   │   └── research.py        ← /api/research endpoints
+│   ├── services/
+│   │   ├── embedder.py        ← embedding logic
+│   │   ├── vector_store.py    ← ChromaDB logic
+│   │   ├── llm.py             ← Claude API logic
+│   │   └── chunker.py         ← document chunking logic
+│   ├── models/
+│   │   └── schemas.py         ← Pydantic request/response models
+│   └── core/
+│       └── config.py          ← environment variables, settings
+├── frontend/                  ← I'll give you this complete
+└── docker-compose.yml
