@@ -28,7 +28,8 @@ class QueryResult(BaseModel):
 
 class QueryResponse(BaseModel):
         query: str
-        results: list[QueryResult]
+        answer: str
+        sources: list[QueryResult]
 
 class ChatMessage(BaseModel):
         role: str
