@@ -79,6 +79,7 @@ if __name__=="__main__":
     results = vector_store.search(query_embedding, top_k=2)
 
     print(f"\n🔍 Query: {query}")
+    print(results)
     for r in results:
         print(f"  → [{r['score']:.3f}] {r['content']}")
 
