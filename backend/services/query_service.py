@@ -6,11 +6,12 @@ class QueryService:
 
     def search(self,query: str, top_k: int=3) -> dict:
 
-        embeded_query=embedder.embed_text(text=query)
-        vec_search=vector_store.search(query_embedding=embeded_query,top_k=top_k)
+        embedded_query=embedder.embed_text(text=query)
+        vec_search=vector_store.search(query_embedding=embedded_query,top_k=top_k)
         context=""
         for i in vec_search:
-            context=context+i["metadata"]["source"]+"\n"+i["content"]+"\n\n"
+            context += f"Source: {i['metadata']['source']}\n"
+            context += f"Content: {i['content']}\n\n"
 
         result=llm_service.ask(question=query,context=context)
 

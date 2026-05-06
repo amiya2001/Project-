@@ -17,3 +17,18 @@ paks/                          ← root
 │       └── config.py          ← environment variables, settings
 ├── frontend/                  ← I'll give you this complete
 └── docker-compose.yml
+
+
+frontend/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── Sidebar.tsx
+│   ├── ChatPanel.tsx
+│   ├── MessageList.tsx
+│   └── DocumentPanel.tsx
+├── lib/
+│   └── api.ts
+└── package.json
