@@ -36,8 +36,14 @@ class ChatMessage(BaseModel):
         content: str
 
 class ChatRequest(BaseModel):
-        messages: list [ChatMessage]
-        use_knowledge:bool=Field(default=True)
+    session_id: str
+    message: str
+    top_k: int = 3
+
+class ChatResponse(BaseModel):
+    session_id: str
+    answer: str
+    turn: int
 
 
 if __name__ == "__main__":

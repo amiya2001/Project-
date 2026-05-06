@@ -14,7 +14,7 @@ Be concise, accurate, and cite which source your answer comes from."""
 
         user = f"Context:\n{context}\n\nQuestion: {question}" 
 
-        response=self.client.messages.create(model="claude-sonnet-4-5",
+        response=self.client.messages.create(model="claude-haiku-4-5",
                                              max_tokens=1024,
                                              system=system_prompt,
                                              messages=[{"role": "user", "content": user}])
@@ -33,7 +33,7 @@ Be concise, accurate, and cite which source your answer comes from."""
     context:{context}"""
 
         response = self.client.messages.create(
-            model="claude-sonnet-4-5",
+            model="claude-haiku-4-5",
             max_tokens=1024,
             system=system_prompt,
             messages=messages   
